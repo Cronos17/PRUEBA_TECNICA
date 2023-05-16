@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Data from Reddit">
+        <lightning-datatable 
+        key-field = "Author"
+        data={listReddit}
+        columns={columns}
+        onrowaction={handleRowAction}
+        > </lightning-datatable>
+    </lightning-card>
+    <div if:true = {showLoadingSpinner} >
+        <lightning-spinner alternative-text = "Loanding" size ="large"></lightning-spinner>
+    </div>
+</template>
